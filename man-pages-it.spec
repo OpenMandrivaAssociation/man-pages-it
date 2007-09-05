@@ -1,10 +1,10 @@
 %define LANG it
-%define extra_version 0.3.0
+%define extra_version 0.4.0
 %define fextra %name-extra-%{extra_version}
 
 Summary: Italian manual pages
 Name:    man-pages-%LANG
-Version: 2.34
+Version: 2.43
 Release: %mkrel 1
 License: GPL
 URL:     ftp://ftp.pluto.it/pub/pluto/ildp/man/
