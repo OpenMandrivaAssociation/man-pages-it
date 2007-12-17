@@ -11,7 +11,6 @@ URL:     ftp://ftp.pluto.it/pub/pluto/ildp/man/
 Source:  %name-%version.tar.bz2
 Source1:  %fextra.tar.bz2
 Group:   System/Internationalization
-BuildRoot: %_tmppath/%name-%LANG
 BuildRequires: man => 1.5j-8mdk
 Requires: locales-%LANG, man => 1.5j-8mdk
 Autoreq: false
