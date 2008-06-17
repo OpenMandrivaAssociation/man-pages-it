@@ -5,7 +5,7 @@
 Summary: Italian manual pages
 Name:    man-pages-%LANG
 Version: 2.65
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPL
 URL:     ftp://ftp.pluto.it/pub/pluto/ildp/man/
 Source:  %name-%version.tar.bz2
