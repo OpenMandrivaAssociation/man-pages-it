@@ -4,14 +4,15 @@
 
 Summary: Italian manual pages
 Name:    man-pages-%LANG
-Version: 2.65
-Release: %mkrel 2
+Version: 2.80
+Release: %mkrel 1
 License: GPL
 URL:     ftp://ftp.pluto.it/pub/pluto/ildp/man/
-Source:  %name-%version.tar.bz2
+Source:  ftp://ftp.pluto.it/pub/pluto/ildp/man/%name-%version.tar.gz
 Source1:  %fextra.tar.bz2
+Patch0: man-pages-it-2.80-installdir.patch
 Group:   System/Internationalization
-BuildRoot: %_tmppath/%name-%LANG
+BuildRoot: %_tmppath/%name-%version-%release-buildroot
 BuildRequires: man => 1.5j-8mdk
 Requires: locales-%LANG, man => 1.5j-8mdk
 Autoreq: false
@@ -31,13 +32,15 @@ BEWARE: some pages are dated!
 
 %prep
 %setup -q -a1
+%patch0 -p0
 
 %build
 
 %install
+rm -fr %buildroot
 
-%makeinstall_std prefix=$RPM_BUILD_ROOT/
-%makeinstall_std prefix=$RPM_BUILD_ROOT/ -C %fextra
+make install prefix=%buildroot%_prefix
+make install prefix=%buildroot -C %fextra
 
 LANG=%LANG DESTDIR=$RPM_BUILD_ROOT /usr/sbin/makewhatis $RPM_BUILD_ROOT/%_mandir/%LANG
 
@@ -69,7 +72,6 @@ fi
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
 %files
 %defattr(0644,root,man,755)
 %doc CHANGELOG HOWTOHELP readme
@@ -78,5 +80,3 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) /var/cache/man/%LANG/whatis
 %config(noreplace) %attr(755,root,root)/etc/cron.weekly/makewhatis-%LANG.cron
 %_mandir/%LANG/man*
-
-
