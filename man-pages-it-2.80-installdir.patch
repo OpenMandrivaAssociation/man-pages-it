@@ -1,0 +1,11 @@
+--- Makefile~	2007-07-14 21:50:08.000000000 +0200
++++ Makefile	2008-10-14 04:27:28.000000000 +0200
+@@ -4,7 +4,7 @@
+ # Do "make gz" or "make bz2" first if you use compressed source pages.
+ 
+ prefix?=/usr
+-MANDIR=$(prefix)/share/man
++MANDIR=$(prefix)/share/man/it
+ 
+ GZIP=gzip -9
+ BZIP2=bzip2 -9
