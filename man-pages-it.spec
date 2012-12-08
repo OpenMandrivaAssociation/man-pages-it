@@ -5,7 +5,7 @@
 Summary: Italian manual pages
 Name:    man-pages-%LNG
 Version: 2.80
-Release: %mkrel 5
+Release: %mkrel 6
 License: GPL
 URL:     ftp://ftp.pluto.it/pub/pluto/ildp/man/
 Source:  ftp://ftp.pluto.it/pub/pluto/ildp/man/%name-%version.tar.gz
@@ -85,3 +85,61 @@ rm -rf %{buildroot}
 %config(noreplace) %attr(755,root,root) %{_sysconfdir}/cron.weekly/makewhatis-%LNG.cron
 %_mandir/%LNG/man*
 %_mandir/%LNG/whatis
+
+
+%changelog
+* Wed May 04 2011 Oden Eriksson <oeriksson@mandriva.com> 2.80-5mdv2011.0
++ Revision: 666371
+- mass rebuild
+
+* Sat Dec 04 2010 Oden Eriksson <oeriksson@mandriva.com> 2.80-4mdv2011.0
++ Revision: 609323
+- rebuild
+
+* Sat Dec 04 2010 Oden Eriksson <oeriksson@mandriva.com> 2.80-3mdv2011.0
++ Revision: 609305
+- fix build
+- fix typos
+- fix build
+- rebuild
+- rebuilt for 2010.1
+
+* Tue Oct 14 2008 Funda Wang <fwang@mandriva.org> 2.80-1mdv2009.1
++ Revision: 293462
+- New version 2.80
+- fix installdir
+
+* Tue Jun 17 2008 Thierry Vignaud <tv@mandriva.org> 2.65-2mdv2009.0
++ Revision: 223189
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Tue Oct 09 2007 Thierry Vignaud <tv@mandriva.org> 2.65-1mdv2008.1
++ Revision: 96136
+- new release
+
+* Wed Sep 05 2007 Thierry Vignaud <tv@mandriva.org> 2.43-1mdv2008.0
++ Revision: 80039
+- new release
+
+
+* Fri Nov 17 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.34-1mdv2007.0
++ Revision: 85366
+- Import man-pages-it
+
+* Fri Nov 17 2006 Thierry Vignaud <tvignaud@mandrakesoft.com> 2.34-1mdv2007.1
+- new release
+- new URL
+- kill uneeded prereq
+- kill patch0 (no more needed)
+
+* Thu May 11 2006 Thierry Vignaud <tvignaud@mandriva.com> 0.3.4-2mdk
+- use %%mkrel
+- fix conflict with vim
+
+* Thu Dec 11 2003 Thierry Vignaud <tvignaud@mandrakesoft.com> 0.3.4-1mdk
+- new release
+
