@@ -84,7 +84,7 @@ rm -rf %{buildroot}
 %ghost %config(noreplace) /var/cache/man/%LNG/whatis
 %config(noreplace) %attr(755,root,root) %{_sysconfdir}/cron.weekly/makewhatis-%LNG.cron
 %_mandir/%LNG/man*
-%_mandir/%LNG/whatis
+#%_mandir/%LNG/whatis
 
 
 %changelog
