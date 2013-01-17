@@ -5,7 +5,7 @@
 Summary: Italian manual pages
 Name:    man-pages-%LNG
 Version: 2.80
-Release: %mkrel 6
+Release: 7
 License: GPL
 URL:     ftp://ftp.pluto.it/pub/pluto/ildp/man/
 Source:  ftp://ftp.pluto.it/pub/pluto/ildp/man/%name-%version.tar.gz
@@ -42,12 +42,12 @@ rm -fr %buildroot
 make install prefix=%buildroot%_prefix
 make install prefix=%buildroot -C %fextra
 
-LANG=%LNG DESTDIR=%{buildroot} %{_sbindir}/makewhatis %{buildroot}/%_mandir/%LNG
+LANG=%LNG DESTDIR=%{buildroot} %{_bindir}/mandb %{buildroot}/%_mandir/%LNG
 
 mkdir -p %{buildroot}%{_sysconfdir}/cron.weekly
 cat > %{buildroot}%{_sysconfdir}/cron.weekly/makewhatis-%LNG.cron << EOF
 #!/bin/bash
-LANG=%LNG %{_sbindir}/makewhatis %_mandir/%LNG
+LANG=%LNG %{_bindir}/mandb %_mandir/%LNG
 exit 0
 EOF
 chmod a+x %{buildroot}%{_sysconfdir}/cron.weekly/makewhatis-%LNG.cron
