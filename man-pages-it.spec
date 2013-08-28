@@ -5,7 +5,7 @@
 Summary:	Italian manual pages
 Name:		man-pages-%{LNG}
 Version:	2.80
-Release:	7
+Release:	8
 License:	GPLv2
 Group:		System/Internationalization
 Url:		ftp://ftp.pluto.it/pub/pluto/ildp/man/
@@ -50,6 +50,12 @@ touch %{buildroot}/var/cache/man/%{LNG}/whatis
 
 # these are provided by vim7:
 rm -f %{buildroot}/%{_mandir}/%{LNG}/man1/{view.,rview.,vim}*
+
+# (tpg) provided by dpkg
+rm -rf %{buildroot}/%{_mandir}/%{LNG}/man5/deb-control.5*
+rm -rf %{buildroot}/%{_mandir}/%{LNG}/man5/deb.5*
+rm -rf %{buildroot}/%{_mandir}/%{LNG}/man5/dpkg.cfg.5*
+
 
 %postun
 # 0 means deleting the package
