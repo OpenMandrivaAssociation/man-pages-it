@@ -5,7 +5,7 @@
 Summary:	Italian manual pages
 Name:		man-pages-%{LNG}
 Version:	2.80
-Release:	15
+Release:	16
 License:	GPLv2
 Group:		System/Internationalization
 Url:		ftp://ftp.pluto.it/pub/pluto/ildp/man/
