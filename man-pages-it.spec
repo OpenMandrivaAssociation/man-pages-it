@@ -5,7 +5,7 @@
 Summary:	Italian manual pages
 Name:		man-pages-%{LNG}
 Version:	2.80
-Release:	16
+Release:	17
 License:	GPLv2
 Group:		System/Internationalization
 Url:		ftp://ftp.pluto.it/pub/pluto/ildp/man/
@@ -72,7 +72,6 @@ fi
 
 %files
 %doc CHANGELOG HOWTOHELP readme
-%dir %{_mandir}/%{LNG}
 %dir /var/cache/man/%{LNG}
 %ghost %config(noreplace) /var/cache/man/%{LNG}/whatis
 %config(noreplace) %attr(755,root,root) %{_sysconfdir}/cron.weekly/makewhatis-%{LNG}.cron
@@ -80,4 +79,3 @@ fi
 %{_mandir}/%{LNG}/cat*
 %{_mandir}/%{LNG}/CACHEDIR.TAG*
 %{_mandir}/%{LNG}/index.db*
-
