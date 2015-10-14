@@ -5,7 +5,7 @@
 Summary:	Italian manual pages
 Name:		man-pages-%{LNG}
 Version:	2.80
-Release:	17
+Release:	18
 License:	GPLv2
 Group:		System/Internationalization
 Url:		ftp://ftp.pluto.it/pub/pluto/ildp/man/
@@ -16,8 +16,9 @@ BuildArch:	noarch
 BuildRequires:	man => 1.5j-8mdk
 Requires:	locales-%{LNG}, man => 1.5j-8mdk
 Autoreq:	false
+Conflicts:	filesystem < 3.0-17
 
-%description 
+%description
 Italian translations of Linux manual pages:	this package includes not
 only those from the LDP, but also translations of other popular
 man-pages.
