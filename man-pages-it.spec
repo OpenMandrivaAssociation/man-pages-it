@@ -13,6 +13,7 @@ Source0:	ftp://ftp.pluto.it/pub/pluto/ildp/man/%{name}-%{version}.tar.gz
 Source1:	%fextra.tar.bz2
 Patch0:		man-pages-it-2.80-installdir.patch
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	man => 1.5j-8mdk
 Requires:	locales-%{LNG}, man => 1.5j-8mdk
 Autoreq:	false
